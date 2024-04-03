@@ -31,6 +31,12 @@ header {
   border-radius: 15px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 
 .ass {
   background-color: grey;
@@ -162,11 +168,21 @@ input {
     align-items: center;
     text-align: center;
   }
+
+  .logo{
+    flex-direction: column;
+  }
+
   .card {
     max-width: 240px;
+    padding: 1rem
   }
 
   h1 {
     font-size: 1.6rem;
+  }
+  
+  button {
+    font-size: .9rem;
   }
 }
