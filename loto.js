@@ -99,7 +99,7 @@ function generateDezenasMega() {
   }
 
   let partialDezena = "";
-  for (let i = 1, n = ltMega.length; i < quantDezenas.value; ++i) {
+  for (let i = 0, n = ltMega.length; i < quantDezenas.value; ++i) {
     partialDezena +=
       Math.floor(Math.random() * n)
         .toString()
@@ -126,7 +126,7 @@ function generateDezenasFacil() {
   }
 
   let partialDezena = "";
-  for (let i = 1, n = ltFacil.length; i < quantDezenas.value; ++i) {
+  for (let i = 0, n = ltFacil.length; i < quantDezenas.value; ++i) {
     partialDezena +=
       Math.floor(Math.random() * n)
         .toString()
