@@ -16,6 +16,7 @@ body {
   justify-content: space-between;
   font-family: "Roboto";
   width: 100vw;
+  height: 100vh;
   padding: 2rem;
   background-color: grey;
 }
@@ -29,6 +30,12 @@ header {
   border-bottom: 6px solid grey;
   box-shadow: 2px 20px 20px rgba(40, 40, 50, 1);
   border-radius: 15px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  padding-bottom: 2rem;
 }
 
 .logo {
@@ -46,10 +53,15 @@ header {
   border-radius: 10px;
   font-weight: bold;
 }
+
 .ass,
 .ass > * {
   color: #cecece;
   text-decoration: none;
+}
+
+footer>.ass {
+  font-weight: bold;
 }
 
 section {

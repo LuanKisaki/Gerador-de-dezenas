@@ -10,6 +10,8 @@
   <meta property="og:title" content="Gerador de Dezenas - Luan Kisaki" />
   <meta property="og:description" content="Gere dezenas aleatorias." />
   <meta property="og:image" content="https://luankisaki.github.io/Gerador-de-dezenas/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="icon" href="./favicon.png" type="image/x-icon" sizes="any">
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +36,30 @@
   </header>
   <section>
 
+    <!-- Fácil -->
+    <div class="card bg bg-facil">
+      <h1>
+        Lt Fácil
+      </h1>
+      <label for="valueFacil">
+        Quantas dezenas deseja gerar?
+      </label>
+
+      <input id="valueFacil" type="range" min="1" max="20" oninput="setFacil()">
+
+      <button class="btn-facil" onclick="generateDezenasFacil()">
+        Gerar
+        <div class="dezenas" id="setValueFacil">
+          00
+        </div>
+        Dezenas
+      </button>
+      <label for="dezenasFacil">
+        Dezenas geradas
+      </label>
+      <textarea id="dezenasFacil" rows="3" disabled type="text"></textarea>
+    </div>
+    
     <!-- Mania -->
     <div class="card bg bg-mania">
       <h1>
@@ -81,30 +107,13 @@
       <textarea id="dezenasMega" rows="3" disabled type="text"></textarea>
     </div>
 
-    <!-- Fácil -->
-    <div class="card bg bg-facil">
-      <h1>
-        Lt Fácil
-      </h1>
-      <label for="valueFacil">
-        Quantas dezenas deseja gerar?
-      </label>
-
-      <input id="valueFacil" type="range" min="1" max="20" oninput="setFacil()">
-
-      <button class="btn-facil" onclick="generateDezenasFacil()">
-        Gerar
-        <div class="dezenas" id="setValueFacil">
-          00
-        </div>
-        Dezenas
-      </button>
-      <label for="dezenasFacil">
-        Dezenas geradas
-      </label>
-      <textarea id="dezenasFacil" rows="3" disabled type="text"></textarea>
-    </div>
+    
   </section>
+  <footer>
+    <span style="color: white">
+      By <a style="color: white; text-decoration: none;" href="https://linkedin.com/in/luankisaki" target="_blank">Luan Kisaki Teixeira</a>
+    </span>
+  </footer>
 </body>
 <script src="./loto.js"></script>
 

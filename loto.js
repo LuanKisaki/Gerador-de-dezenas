@@ -1,4 +1,3 @@
-
 const quantDezenasMania = document.querySelector("#valueMania");
 const dezenasMania = document.querySelector("#dezenasMania");
 const setValueMania = document.querySelector("#setValueMania");
@@ -10,7 +9,6 @@ const setValueMega = document.querySelector("#setValueMega");
 const quantDezenasFacil = document.querySelector("#valueFacil");
 const dezenasFacil = document.querySelector("#dezenasFacil");
 const setValueFacil = document.querySelector("#setValueFacil");
-
 
 //  Load Local Storage
 
@@ -68,19 +66,22 @@ function generateDezenasMania() {
 
   const ltMania = [];
   for (let i = 0; i <= 99; i++) {
-    ltMania.push(i.toString());
+    ltMania.push(i);
   }
 
-  let partialDezena = "";
-  for (let i = 0, n = ltMania.length; i < quantDezenas.value; ++i) {
-    partialDezena +=
-      Math.floor(Math.random() * n)
-        .toString()
-        .padStart(2, "0") + " ";
+  let partialDezenas = [];
+  while (partialDezenas.length < quantDezenas.value) {
+    let verifyDezena = Math.floor(Math.random() * ltMania.length)
+      .toString()
+      .padStart(2, "0");
+
+    if (!partialDezenas.includes(verifyDezena)) {
+      partialDezenas.push(verifyDezena);
+    }
   }
 
   localStorage.setItem("Lt-Mania", setValue.innerHTML);
-  return (dezenas.value = partialDezena);
+  return (dezenas.value = partialDezenas.join(" "));
 }
 
 function generateDezenasMega() {
@@ -95,19 +96,22 @@ function generateDezenasMega() {
 
   const ltMega = [];
   for (let i = 1; i <= 60; i++) {
-    ltMega.push(i.toString());
+    ltMega.push(i);
   }
 
-  let partialDezena = "";
-  for (let i = 0, n = ltMega.length; i < quantDezenas.value; ++i) {
-    partialDezena +=
-      Math.floor(Math.random() * n)
-        .toString()
-        .padStart(2, "0") + " ";
+  let partialDezenas = [];
+  while (partialDezenas.length < quantDezenas.value) {
+    let verifyDezena = Math.floor(Math.random() * ltMega.length)
+      .toString()
+      .padStart(2, "0");
+
+    if (!partialDezenas.includes(verifyDezena)) {
+      verifyDezena !== "00" ? partialDezenas.push(verifyDezena) : null;
+    }
   }
 
   localStorage.setItem("Lt-Mega", setValue.innerHTML);
-  return (dezenas.value = partialDezena);
+  return (dezenas.value = partialDezenas.join(" "));
 }
 
 function generateDezenasFacil() {
@@ -122,17 +126,20 @@ function generateDezenasFacil() {
 
   const ltFacil = [];
   for (let i = 1; i <= 25; i++) {
-    ltFacil.push(i.toString());
+    ltFacil.push(i);
   }
 
-  let partialDezena = "";
-  for (let i = 0, n = ltFacil.length; i < quantDezenas.value; ++i) {
-    partialDezena +=
-      Math.floor(Math.random() * n)
-        .toString()
-        .padStart(2, "0") + " ";
+  let partialDezenas = [];
+  while (partialDezenas.length < quantDezenas.value) {
+    let verifyDezena = Math.floor(Math.random() * ltFacil.length)
+      .toString()
+      .padStart(2, "0");
+
+    if (!partialDezenas.includes(verifyDezena)) {
+      verifyDezena !== "00" ? partialDezenas.push(verifyDezena) : null;
+    }
   }
 
   localStorage.setItem("Lt-Facil", setValue.innerHTML);
-  return (dezenas.value = partialDezena);
+  return (dezenas.value = partialDezenas.join(" "));
 }
