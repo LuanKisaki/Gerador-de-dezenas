@@ -135,7 +135,7 @@ input {
 
 .card:hover {
   translate: 0 -8px;
-  box-shadow: 7px 7px 10px rgba(20, 20, 50, 0.5);
+  box-shadow: 2px 7px 20px rgba(20, 20, 50, 0.3);
   background-size: 70%;
 }
 
