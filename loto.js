@@ -72,16 +72,18 @@ function generateDezenasMania() {
   let partialDezenas = [];
   while (partialDezenas.length < quantDezenas.value) {
     let verifyDezena = Math.floor(Math.random() * ltMania.length)
-      .toString()
-      .padStart(2, "0");
-
-    if (!partialDezenas.includes(verifyDezena)) {
-      partialDezenas.push(verifyDezena);
-    }
+    .toString()
+    .padStart(2, "0");
+  if (verifyDezena) {
+    parseInt(verifyDezena);
   }
-
-  localStorage.setItem("Lt-Mania", setValue.innerHTML);
-  return (dezenas.value = partialDezenas.join(" "));
+  if (!partialDezenas.includes(verifyDezena)) {
+    partialDezenas.push(verifyDezena);
+  }
+  sortedDezenas = partialDezenas.sort((a, b) => (a - b))
+}
+localStorage.setItem("Lt-Mania", setValue.innerHTML);
+return (dezenas.value = sortedDezenas.join(" "));
 }
 
 function generateDezenasMega() {
@@ -101,23 +103,26 @@ function generateDezenasMega() {
 
   let partialDezenas = [];
   while (partialDezenas.length < quantDezenas.value) {
-    let verifyDezena = Math.floor(Math.random() * ltMega.length)
-      .toString()
-      .padStart(2, "0");
-
-    if (!partialDezenas.includes(verifyDezena)) {
-      verifyDezena !== "00" ? partialDezenas.push(verifyDezena) : null;
-    }
+    let verifyDezena = Math.floor(Math.random() * ltMega.length + 1)
+    .toString()
+    .padStart(2, "0");
+  if (verifyDezena) {
+    parseInt(verifyDezena);
   }
-
-  localStorage.setItem("Lt-Mega", setValue.innerHTML);
-  return (dezenas.value = partialDezenas.join(" "));
+  if (!partialDezenas.includes(verifyDezena)) {
+    verifyDezena !== "00" ? partialDezenas.push(verifyDezena) : null;
+  }
+  sortedDezenas = partialDezenas.sort((a, b) => (a - b))
+}
+localStorage.setItem("Lt-Mega", setValue.innerHTML);
+return (dezenas.value = sortedDezenas.join(" "));
 }
 
 function generateDezenasFacil() {
   let quantDezenas = quantDezenasFacil;
   let setValue = setValueFacil;
   let dezenas = dezenasFacil;
+  console.log(quantDezenasFacil)
 
   if (quantDezenas.value === "") {
     alert("Escolha quantas dezenas você quer gerar.");
@@ -131,15 +136,17 @@ function generateDezenasFacil() {
 
   let partialDezenas = [];
   while (partialDezenas.length < quantDezenas.value) {
-    let verifyDezena = Math.floor(Math.random() * ltFacil.length)
+    let verifyDezena = Math.floor(Math.random() * ltFacil.length + 1)
       .toString()
       .padStart(2, "0");
-
+    if (verifyDezena) {
+      parseInt(verifyDezena);
+    }
     if (!partialDezenas.includes(verifyDezena)) {
       verifyDezena !== "00" ? partialDezenas.push(verifyDezena) : null;
     }
+    sortedDezenas = partialDezenas.sort((a, b) => (a - b))
   }
-
   localStorage.setItem("Lt-Facil", setValue.innerHTML);
-  return (dezenas.value = partialDezenas.join(" "));
+  return (dezenas.value = sortedDezenas.join(" "));
 }

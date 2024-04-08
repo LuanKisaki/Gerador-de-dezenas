@@ -1,1 +1,12 @@
-{}
+{
+  "name": "gerador-de-dezenas",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./image/loteria-logo.svg",
+      "sizes": "157x157",
+      "purpose": "maskable"
+    }
+  ]
+}
