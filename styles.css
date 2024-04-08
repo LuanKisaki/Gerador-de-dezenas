@@ -93,6 +93,10 @@ input, textarea {
   resize: none;
 }
 
+textarea {
+  border: 0;
+}
+
 button:hover {
   filter: brightness(150%);
 }
