@@ -28,7 +28,7 @@ header {
   background-color: #fafafa;
   padding: 2rem;
   border-bottom: 6px solid grey;
-  box-shadow: 2px 20px 20px rgba(40, 40, 50, 1);
+  /* box-shadow: 2px 20px 20px rgba(40, 40, 50, 1); */
   border-radius: 15px;
 }
 footer {
@@ -49,14 +49,14 @@ footer {
   background-color: grey;
   padding: 0.7rem 1.4rem;
   border-top: 6px solid grey;
-  box-shadow: inset 2px 15px 15px rgba(40, 40, 50, 1);
+  /* box-shadow: inset 2px 15px 15px rgba(40, 40, 50, 1); */
   border-radius: 10px;
   font-weight: bold;
 }
 
 .ass,
 .ass > * {
-  color: #cecece;
+  color: #fefefe;
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ section {
   gap: 3rem;
   padding: 4rem 0;
   border-bottom: 6px solid grey;
-  box-shadow: 2px 20px 20px rgba(40, 40, 50, 1);
+  /* box-shadow: 2px 20px 20px rgba(40, 40, 50, 1); */
   border-radius: 15px;
   background-color: #fafafa;
   margin: 2rem 0 3rem;
@@ -117,7 +117,7 @@ input {
   flex-direction: column;
   background-image: url("./image/loteria.svg");
   background-repeat: no-repeat;
-  background-position: left 130% bottom -25%;
+  background-position: left 130% top -25%;
   background-size: 55%;
   max-width: 340px;
   text-align: left;
@@ -126,7 +126,7 @@ input {
   border: 1px solid;
   padding: 2rem;
   translate: 0 0 ;
-  box-shadow: 7px 7px 7px rgba(20, 20, 50, 0.5);
+  /* box-shadow: 7px 7px 7px rgba(20, 20, 50, 0.5); */
   transition: 
     translate .2s ease-in-out,
     background-size 0.2s ease-in-out,
@@ -135,7 +135,7 @@ input {
 
 .card:hover {
   translate: 0 -8px;
-  box-shadow: 7px 7px 14px rgba(20, 20, 50, 0.5);
+  box-shadow: 7px 7px 10px rgba(20, 20, 50, 0.5);
   background-size: 70%;
 }
 
@@ -157,6 +157,10 @@ input {
   background-color: rgba(10, 146, 106, 0.5);
   border: 1px solid rgba(10, 146, 106, 1);
   border-bottom: 3px solid rgba(10, 146, 106, 1);
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .btn-mania {
@@ -186,7 +190,7 @@ input {
   }
 
   .card {
-    max-width: 240px;
+    max-width: 100%;
     padding: 1rem
   }
 
