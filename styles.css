@@ -93,6 +93,11 @@ input, textarea {
   resize: none;
 }
 
+.text-white, .text-white > * {
+  color: white;
+  font-style: italic;
+}
+
 textarea {
   border: 0;
 }
